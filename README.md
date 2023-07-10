@@ -19,12 +19,12 @@ npm i
 
 ### file structure
 
-- dist - содержит скомпилированные css и js бандлы
-- src - содержит все исходники
-- src/components - содержит vue js компоненты
-- src/helpers - тут могут располагаться ваши js файлы с хелперами
-- src/scripts - тут могут располагаться ваши js файлы
-- src/scss - тут располагаются scss файлы
+- dist - has complied css & js bundles
+- src - has all sources
+- src/components - has vue js components
+- src/helpers - here could be placed your js files with helpers
+- src/scripts - here could be placed your js файлы
+- src/scss - has scss files
 
 ### Usage
 ```
@@ -36,4 +36,4 @@ npm run prod
 ```
 
 ### Author
-Starikov Alexander - Backend Middle Developer (UMAX)
+Starikov Alexander
