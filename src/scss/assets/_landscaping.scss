@@ -1,0 +1,57 @@
+.landscaping {
+    margin-top: 12rem;
+    overflow: hidden;
+
+    &__title {
+        text-align: center;
+        margin-bottom: 6.8rem;
+    }
+
+    &__slider-slide {
+        height: 31.1rem !important;
+    }
+
+    &__slider-buttons {
+        margin-top: 3.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4.4rem;
+    }
+
+    &__slider-prev,
+    &__slider-next {
+        position: relative;
+        top: unset;
+        left: unset;
+        right: unset;
+        width: unset;
+        height: unset;
+        margin: unset;
+    }
+}
+
+@media(max-width: 1024px) {
+    .landscaping {
+        margin-top: 10rem;
+
+        &__title {
+            margin-bottom: 2.6rem;
+        }
+    }
+}
+
+@media(max-width: 500px) {
+    .landscaping {
+        margin-top: 4rem;
+
+        &__slider-slide {
+            height: 31.1rem !important;
+        }
+
+        &__slider-buttons {
+            margin-top: 2.7rem;
+            gap: 4.6rem;
+        }
+    }
+}

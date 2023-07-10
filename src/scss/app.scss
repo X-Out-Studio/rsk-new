@@ -1,0 +1,53 @@
+// Fonts
+//@import "fonts";
+//@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/zona-pro');
+// Variables
+@import 'variables';
+
+// Bootstrap
+// @import "~bootstrap/scss/functions";
+// @import "~bootstrap/scss/variables";
+// @import "~bootstrap/scss/variables-dark";
+// @import "~bootstrap/scss/maps";
+// @import "~bootstrap/scss/mixins";
+// @import "~bootstrap/scss/utilities";
+// @import "~bootstrap/scss/root";
+// @import "~bootstrap/scss/reboot";
+// @import "~bootstrap/scss/type";
+// @import "~bootstrap/scss/images";
+// @import "~bootstrap/scss/containers";
+// @import "~bootstrap/scss/grid";
+// @import "~bootstrap/scss/tables";
+// @import "~bootstrap/scss/forms";
+// @import "~bootstrap/scss/buttons";
+// @import "~bootstrap/scss/transitions";
+// @import "~bootstrap/scss/dropdown";
+// @import "~bootstrap/scss/button-group";
+// @import "~bootstrap/scss/nav";
+// @import "~bootstrap/scss/navbar";
+// @import "~bootstrap/scss/card";
+// @import "~bootstrap/scss/badge";
+// @import "~bootstrap/scss/list-group";
+// @import "~bootstrap/scss/close";
+// @import "~bootstrap/scss/helpers";
+// @import "~bootstrap/scss/utilities/api";
+
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+@import 'swiper/css/autoplay';
+@import 'swiper/css/effect-fade';
+@import 'swiper/css/scrollbar';
+// @import "animate.css";
+
+//@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+//@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+//@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+//@import "~@fortawesome/fontawesome-free/scss/regular.scss";
+
+//@import "vue-toastification/dist/index.css";
+
+@import './assets/style';
+@import './assets/fonts';
+@import './assets/normalize';

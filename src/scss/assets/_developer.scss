@@ -1,0 +1,146 @@
+.developer {
+    margin-top: 11.8rem;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+
+    &__left {
+        width: 45%;
+        padding-left: 15rem;
+    }
+
+    &__title {
+        font-family: 'Evolventa';
+        font-weight: 700;
+        font-size: 4rem;
+        line-height: 5.3rem;
+        text-transform: uppercase;
+        color: $black;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        list-style: none;
+        padding-left: 0;
+        align-items: flex-start;
+        margin-top: 6.4rem;
+        margin-bottom: 5.3rem;
+        padding-right: 5.7rem;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 2.4rem;
+        line-height: 153%;
+        color: $black;
+    }
+
+    &__statistics {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        column-gap: 6rem;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+    }
+
+    &__number {
+        font-family: 'Evolventa';
+        text-align: center;
+        width: fit-content;
+        min-width: 15.7rem;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 9.8rem;
+        line-height: 7.8rem;
+        text-transform: uppercase;
+        color: $purple;
+        border-bottom: 0.3rem solid $purple;
+    }
+
+    &__desc {
+        margin-top: 1rem;
+        font-weight: 400;
+        font-size: 1.7rem;
+        line-height: 2.3rem;
+        max-width: 16rem;
+        color: $grey;
+    }
+
+    &__right {
+        width: 55%;
+
+        img {
+            object-fit: cover;
+        }
+    }
+}
+
+@media(max-width: 1024px) {
+
+    .developer {
+        flex-direction: column;
+        gap: 3.7rem;
+        margin-top: 4rem;
+
+        &__left {
+            width: 100%;
+            padding-left: 2rem;
+        }
+
+        &__right {
+            width: 100%;
+            height: auto;
+        }
+
+        &__list {
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem;
+            padding-right: 2rem;
+        }
+    }
+
+}
+
+@media(max-width: 500px) {
+
+    .developer {
+
+        &__title {
+            font-size: 3rem;
+            line-height: 4rem;
+        }
+
+        &__text {
+            font-size: 1.8rem;
+            line-height: 147.5%;
+        }
+
+        &__number {
+            font-size: 7rem;
+            line-height: 6.3rem;
+            min-width: 12.6rem;
+        }
+
+        &__desc {
+            font-size: 1.5rem;
+            line-height: 1.9rem;
+            max-width: 14rem;
+        }
+
+        &__statistics {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            column-gap: 6rem;
+            row-gap: 2rem;
+        }
+    }
+}

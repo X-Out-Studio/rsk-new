@@ -1,0 +1,303 @@
+.construction-progress {
+    margin-top: 16.1rem;
+    overflow: hidden;
+
+    &__title {
+        font-family: 'Evolventa';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 4rem;
+        line-height: 5.3rem;
+        text-transform: uppercase;
+        color: #000000;
+    }
+
+    &__swiper {
+        height: 39.9rem;
+    }
+
+    &__block {
+        margin-top: 8.5rem;
+    }
+
+    &__top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__left {
+        display: grid;
+        grid-template-columns: repeat(13, 1fr);
+        height: 40px;
+        margin-top: 20px;
+
+        &--wrapper {
+            max-width: 65.8rem;
+            height: 110px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            display: flex;
+            flex-direction: row;
+
+            &::-webkit-scrollbar {
+                width: 0;
+                height: 0;
+            }
+        }
+    }
+
+    &__item {
+        position: relative;
+        width: 8rem;
+        border-bottom: 1px solid #374751;
+
+        &:last-child {
+
+            .construction-progress__circle {
+                display: none;
+            }
+
+            .construction-progress__date {
+                display: none;
+            }
+        }
+    }
+
+    &__circle {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background-color: #FFFFFF;
+        z-index: 1;
+        left: 100%;
+        bottom: -9px;
+        border: 1px solid #374751;
+        cursor: pointer;
+        transition: background-color 0.3s, border 0.3s width 0.3s, height 0.3s, bottom 0.3s;
+
+        &--visited {
+            background-color: $purple;
+            border: 1px solid $purple;
+        }
+
+        &--active {
+            background-color: $purple;
+            border: 4px solid #FFFFFF;
+            box-shadow: 0px 4px 29px $purple;
+            width: 28px;
+            height: 28px;
+            bottom: -14px;
+        }
+    }
+
+    &__date {
+        position: absolute;
+        left: 100%;
+        bottom: -50px;
+        font-family: 'Zona Pro';
+        font-style: italic;
+        font-weight: 400;
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+        color: #000000;
+        opacity: 0;
+        transition: opacity 0.3s;
+
+        &--active {
+            opacity: 1;
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: row;
+        gap: 12.4rem;
+        align-items: center;
+    }
+
+    &__swiper {
+        overflow: hidden;
+    }
+
+    .select {
+        position: relative;
+        width: 23.3rem;
+        height: 6.8rem;
+        margin: 0 auto;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 2.3rem;
+        color: #000000;
+
+        &__title {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            padding: 2.3rem 2.6rem;
+            justify-content: space-between;
+            border: solid 0.1rem #000000;
+            cursor: pointer;
+
+            &:hover {
+                border: solid 0.1rem $purple;
+            }
+
+            svg {
+                transition: transform 0.3s;
+            }
+        }
+
+        &__content {
+            width: 23.3rem;
+            padding: 2.3rem 0 2.4rem 2.6rem;
+            position: absolute;
+            top: 6.8rem;
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+            border: 0.1rem solid #000000;
+            border-top: none;
+            transition: all 0.3s ease-out;
+            z-index: 8;
+            gap: 2.3rem;
+        }
+
+        &__item {
+            color: rgba(0, 0, 0, 0.44);
+            cursor: pointer;
+
+            &--active {
+                color: $purple;
+            }
+
+            &:hover {
+                color: $purple;
+            }
+        }
+
+        &--active {
+            .select__title {
+                svg {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+
+    .navigation {
+        display: none;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 2rem;
+
+        &__button {
+            background-color: transparent;
+            border: none;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            color: #C0C0C0;
+            cursor: pointer;
+
+            &--next {
+                transform: rotate(-180deg);
+            }
+
+            &:hover {
+                color: #374751;
+            }
+        }
+    }
+}
+
+@media(max-width: 1024px) {
+    .construction-progress {
+
+        margin-top: 4.3rem;
+
+        &__top {
+            flex-direction: column;
+        }
+
+        &__right {
+            order: -1;
+            gap: 2rem;
+        }
+
+        &__title {
+            text-align: end;
+        }
+
+        &__block {
+            margin-top: 4.2rem;
+        }
+
+        &__left {
+            &--wrapper {
+                max-width: 100%;
+                overflow-x: auto;
+                height: 120px;
+
+                &::-webkit-scrollbar {
+                    width: 0;
+                    height: 0;
+                }
+            }
+        }
+
+        .navigation {
+            display: flex;
+        }
+
+        &__date {
+            bottom: -55px;
+        }
+    }
+}
+
+@media(max-width: 500px) {
+    .construction-progress {
+
+        &__title {
+            order: -1;
+        }
+
+        &__swiper {
+            height: 24.2rem;            
+        }
+
+        &__left {
+            height: 60px;
+
+            &--wrapper {
+                height: 140px;
+            }
+        }
+
+        &__right {
+            flex-direction: column;
+            gap: 3.4rem;
+            align-items: flex-start;
+
+            .select {
+                margin: 0;
+                font-size: 2rem;
+                line-height: 2.3rem;
+
+                &__title {
+                    font-size: 2rem;
+                    line-height: 2.3rem;
+                }
+            }
+        }
+
+        &__title {
+            font-size: 3rem;
+            line-height: 4rem;
+        }
+    }
+}

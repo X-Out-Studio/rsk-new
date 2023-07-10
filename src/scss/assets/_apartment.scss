@@ -1,0 +1,367 @@
+.apartment {
+    margin-top: 9.8rem;
+    overflow: hidden;
+
+    &__title {
+        margin-bottom: 3.5rem;
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__card {
+        max-width: 65.6rem;
+        width: 100%;
+        background: #ffffff;
+        border: 0.3rem solid #374751;
+        padding: 3.4rem 2.5rem;
+        margin-right: 13.3rem;
+
+        &-img {
+            background: #ffffff;
+            border: 0.1rem solid #000000;
+
+            margin-bottom: 2.2rem;
+
+            height: 37.4rem;
+
+            & img {
+                object-fit: contain;
+            }
+        }
+
+        &-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+
+            &--mb {
+                margin-bottom: 3.9rem;
+            }
+        }
+
+        &-room-type {
+            font-weight: 700;
+            font-size: 2.5rem;
+            line-height: 2.9rem;
+            color: #000000;
+
+            margin-right: 2rem;
+        }
+
+        &-room-square {
+            font-weight: 700;
+            font-size: 2.5rem;
+            line-height: 2.9rem;
+            color: #000000;
+        }
+
+        &-text {
+            font-weight: 300;
+            font-size: 2rem;
+            line-height: 2.3rem;
+            color: #6f6f6f;
+        }
+
+        &-price {
+            font-weight: 700;
+            font-size: 2rem;
+            line-height: 2.3rem;
+            color: #000000;
+            margin-left: 2rem;
+        }
+
+        &-btn {
+            margin-top: 3.2rem;
+        }
+
+        &-buttons {
+            display: none;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        &-text {
+            font-weight: 300;
+            font-size: 2.5rem;
+            line-height: 3.8rem;
+            text-align: right;
+            color: #000000;
+
+            max-width: 65.7rem;
+            width: 100%;
+
+            margin-bottom: 7.7rem;
+        }
+
+        &-form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        &-tabs {
+            display: flex;
+            align-items: center;
+            margin-bottom: 7.5rem;
+            scroll-behavior: smooth;
+        }
+
+        &-tab {
+            & input {
+                display: none;
+
+                // &:checked+label {
+                //   background: #374751;
+                //   color: #ffffff;
+                // }
+            }
+
+            & label {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                font-weight: 300;
+                font-size: 2.5rem;
+                line-height: 2.9rem;
+                color: #000000;
+
+                cursor: pointer;
+                transition: 0.25s ease-in-out;
+
+                background: #ffffff;
+                border: 0.1rem solid #000000;
+                padding: 2.1rem 1.8rem;
+
+                margin-right: 1.6rem;
+
+                // &:hover {
+                //   background: #374751;
+                //   color: #ffffff;
+                // }
+
+                &.active {
+                    background: #374751;
+                    color: #ffffff;
+                }
+            }
+
+            &:last-child {
+                & label {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        &-card-info {
+            display: none;
+        }
+
+        &-cards-title {
+            font-weight: 400;
+            font-size: 2rem;
+            line-height: 2.3rem;
+            text-align: right;
+            color: #000000;
+
+            margin-bottom: 3.8rem;
+        }
+
+        &-cards-wrap {
+            display: none;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 1.9rem;
+
+            max-width: 50.5rem;
+            width: 100%;
+
+            &--active {
+                display: flex;
+            }
+        }
+
+        &-card {
+            & input {
+                display: none;
+
+                &:checked+label {
+                    &::after {
+                        border: 0.4rem solid #7b33e8;
+                    }
+                }
+            }
+
+            & label {
+                width: 24.3rem;
+                height: 17.1rem;
+
+                position: relative;
+                display: block;
+                background: #ffffff;
+                border: 0.1rem solid #374751;
+                cursor: pointer;
+
+                transition: 0.25s ease-in-out;
+
+                img {
+                    object-fit: contain;
+                }
+
+                &::after {
+                    position: absolute;
+                    content: " ";
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border: 0.1rem solid #00000000;
+                    transition: 0.25s ease-in-out;
+                }
+
+                &:hover {
+                    &::after {
+                        border: 0.4rem solid #7b33e8;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 1024px) {
+    .apartment {
+        margin-top: 10rem;
+
+        &__wrap {
+            flex-direction: column-reverse;
+        }
+
+        &__content {
+            align-items: flex-start;
+            margin-bottom: 3.3rem;
+
+            &-text {
+                text-align: start;
+                margin-bottom: 3.3rem;
+            }
+
+            &-tabs {
+                width: max-content;
+                padding: 0 0.1rem;
+                margin-bottom: 1rem;
+            }
+
+            &-cards {
+                display: none;
+            }
+        }
+
+        & .apartment__content-tabs-wrap {
+            width: 100vw;
+            margin-left: -2rem;
+            padding: 0 2rem;
+            display: inline-block;
+            overflow-x: auto;
+        }
+
+        &__card {
+            margin: 0 auto;
+
+            &-buttons {
+                display: flex;
+                margin-top: 3.2rem;
+                gap: 1rem;
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+@media(max-width: 500px) {
+    .apartment {
+        margin-top: 4rem;
+
+        &__title {
+            margin-bottom: 2.1rem;
+        }
+
+        &__content {
+            &-text {
+                font-size: 1.8rem;
+                line-height: 2.8rem;
+            }
+
+            &-tab {
+                & label {
+                    font-size: 1.8rem;
+                    line-height: 2.1rem;
+                    padding: 2rem 2.6rem;
+                }
+            }
+        }
+
+        &__card {
+            padding: 1.3rem;
+
+            &-img {
+                height: 19.7rem;
+                margin-bottom: 2rem;
+            }
+
+            &-row--mb {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 2rem;
+            }
+
+            &-room-type {
+                margin-right: 0;
+                margin-bottom: 1.3rem;
+            }
+
+            &-price {
+                margin: 0;
+            }
+
+            &-btn {
+                font-size: 1.5rem;
+                line-height: 1.9rem;
+                padding: 2.5rem 2.1rem;
+
+                & svg {
+                    margin-left: 0.6rem;
+                }
+            }
+
+            // &-buttons {
+            //   display: flex;
+            //   margin-top: 3.2rem;
+            //   gap: 1rem;
+            //   justify-content: space-between;
+            // }
+        }
+
+        & .apartment__content-tabs-wrap {
+            margin-left: -1.5rem;
+            padding: 0 1.5rem;
+        }
+
+        &__cards {
+            flex-direction: column;
+        }
+    }
+}

@@ -1,0 +1,176 @@
+.document {
+    margin: 11.8rem 0;
+    overflow: hidden;
+
+    &__block {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        width: 48%;
+    }
+
+    &__link {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        padding: 3.2rem 0;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+        color: $greyBorder;
+        transition: color 0.9s, border 0.9s;
+
+        svg {
+            margin-right: 1rem;
+        }
+
+        &:before,
+        &:after {
+            position: absolute;
+            content:"";
+            width: 100%;
+            height: 1px;
+            background-color: $greyBorder;
+            left: 0;
+            transition: background-color 0.4s;
+        }
+
+        &:before {
+            top: 0;
+        }
+
+        &:after {
+            bottom: 0;
+        }
+
+        &:nth-child(2)::before,
+        &:nth-child(3)::before,
+        &:nth-child(4)::before {
+            background-color: transparent;
+            top: -1px;
+        }
+
+        &:hover {
+            color: $purple;
+
+            &:after, 
+            &:before {
+                background-color: $purple;
+                z-index: 10;
+            }
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .document__link {
+            gap: 3.6rem;
+            border-top: 0.3rem solid #000000;
+            border-bottom: 0.3rem solid #000000;
+            font-weight: 400;
+            font-size: 2rem;
+            line-height: 2.3rem;
+            color: #000000;
+            padding: 2.8rem 4rem;
+            transition: color 0.3s, border 0.3s;
+
+            &::before,
+            &::after {
+                width: 0;
+                height: 0;
+            }
+
+            &:hover {
+                color: $purple;
+                border-top: 0.3rem solid $purple;
+                border-bottom: 0.3rem solid $purple;
+            }
+        }
+    }
+
+    &__title {
+        font-family: 'Evolventa';
+        color: $black;
+        font-weight: 700;
+        font-size: 4rem;
+        line-height: 5.3rem;
+        text-transform: uppercase;
+
+        &--mobile {
+            display: none;
+        }
+    }
+}
+
+@media(max-width: 1024px) {
+    .document {
+
+        margin: 4rem 0;
+
+        &__block {
+            flex-direction: column;
+        }
+
+        &__left {
+            width: 100%;
+        }
+
+        &__right {
+            width: 100%;
+
+            .document__link {
+                margin-top: 3rem;
+                width: 100%;
+                padding: 1.9rem 1.7rem 2.1rem 1.7rem;
+            }
+        }
+
+        &__title {
+            display: none;
+
+            &--mobile {
+                display: block;
+                margin-bottom: 3.8rem;
+                padding-left: 0.6rem;
+                font-size: 3rem;
+                line-height: 4rem;
+            }
+        }
+    }
+}
+
+@media(max-width: 500px) {
+
+    .document {
+
+        &__link {
+            padding: 1.6rem 0 1.9rem 0;
+            font-size: 1.8rem;
+            line-height: 2.1rem;
+
+            svg {
+                margin-right: 0;
+            }
+        }
+
+        &__item {
+
+            &-name {
+                font-size: 1.8rem;
+                line-height: 2.1rem;
+            }
+        }
+    }
+}

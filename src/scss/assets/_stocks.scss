@@ -1,0 +1,146 @@
+.stocks {
+  margin-top: 11.8rem;
+
+  & .swiper-slide {
+    display: flex;
+    height: auto;
+  }
+
+  &__swiper {
+    margin-bottom: 5rem;
+
+    &-wrap {
+      margin-top: 3.8rem;
+    }
+
+    &-img {
+      // width: 369px;
+      height: 37.4rem;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: " ";
+        bottom: -0.1rem;
+        left: 0;
+        width: 100%;
+        height: 9.6rem;
+        background: linear-gradient(180deg,
+            rgba(48, 60, 67, 0) 0%,
+            #303c43 100%);
+      }
+    }
+
+    &-slide {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      &:hover {
+        & .stocks__swiper-content {
+          background-color: #7b33e8;
+        }
+
+        & .stocks__swiper-img {
+          &::after {
+            background: linear-gradient(180deg,
+                rgba(123, 51, 232, 0) 0%,
+                #7b33e8 100%);
+          }
+        }
+      }
+    }
+
+    &-content {
+      position: relative;
+      background-color: #303c43;
+      padding: 0 3.2rem 3.6rem 3.6rem;
+      height: 100%;
+    }
+
+    &-title {
+      font-weight: 400;
+      font-size: 3.5rem;
+      line-height: 4.1rem;
+      color: #ffffff;
+      margin-bottom: 2.8rem;
+    }
+
+    &-text {
+      font-weight: 400;
+      font-size: 1.5rem;
+      line-height: 1.8rem;
+      color: #ffffff;
+
+      span {
+        font-weight: 700;
+      }
+    }
+
+    &-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4.4rem;
+    }
+
+    &-prev,
+    &-next {
+      position: relative;
+      top: unset;
+      width: unset;
+      left: unset;
+      right: unset;
+      display: flex;
+      height: auto;
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 1800px) {
+  .stocks__swiper-title {
+    font-size: 3.1rem;
+  }
+}
+
+@media(max-width: 1024px) {
+  .stocks {
+    margin-top: 10rem;
+
+    &__swiper {
+      margin-bottom: 3rem;
+
+      &-wrap {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}
+
+@media(max-width: 500px) {
+  .stocks {
+    margin-top: 4rem;
+
+    &__swiper {
+      &-title {
+        font-size: 2.5rem;
+        line-height: 2.9rem;
+        margin-bottom: 0.8rem;
+      }
+
+      &-text {
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+      }
+
+      &-content {
+        padding: 0 1.7rem 3rem;
+      }
+
+      &-buttons {
+        gap: 4.7rem;
+      }
+    }
+  }
+}
